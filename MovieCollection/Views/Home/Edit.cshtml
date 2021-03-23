@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Edit";
+}
+@model MovieCollection.Models.Movie 
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="MovieID" value="@ViewBag.Movie.MovieId" />
+    <label asp-for="Category">Category:</label>
+    <input asp-for="Category" value="@ViewBag.Movie.Category" />
+    <br />
+    <label asp-for="Title">Title:</label>
+    <input asp-for="Title" value="@ViewBag.Movie.Title" />
+    <br />
+    <label asp-for="Year">Year:</label>
+    <input asp-for="Year" value="@ViewBag.Movie.Year" />
+    <br />
+    <label asp-for="Director">Director:</label>
+    <input asp-for="Director" value="@ViewBag.Movie.Director" />
+    <br />
+    <label asp-for="Rating">Rating:</label>
+    <input asp-for="Rating" value="@ViewBag.Movie.Rating" />
+    <br />
+    <label asp-for="Edited">Edited:</label>
+    <input asp-for="Edited" value="@ViewBag.Movie.Edited" />
+    <br />
+    <label asp-for="Lent_to">Lent To:</label>
+    <input asp-for="Lent_to" value="@ViewBag.Movie.Lent_to" />
+    <br />
+    <label asp-for="Notes">Notes:</label>
+    <input asp-for="Notes" maxlength="25" value="@ViewBag.Movie.Notes" />
+    <br />
+    <button type="submit">Submit Film</button>
+    <div asp-validation-summary="All"></div>
+</form>
